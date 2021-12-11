@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>geo location</title>
+</head>
+<body>
+	<h1>To get current location of that cell phone which you you have done install the softwere is due to click blow button</h1>
+	<button id="btn" onclick="geo();">GeoLocation</button>
+	<h5>Current location :<br> <span id="loc"><u></span></u></h5>
+
+
+
+        <script type="text/javascript">
+        	const loc=document.getElementById('loc');
+        	function geo(){
+        		try{
+        			navigator.geolocation.getCurrentPosition(showPosition);
+        		} catch{
+        			loc.innerHTML=err;
+        		}
+        	}
+        	function showPosition(position) {
+        		loc.innerHTML="lattitude :"+ position.coords.latitude + "<br> longitude :"+ position.coords.longitude;
+        		// body...
+        	}
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- <script type="text/javascript">
+			const loc=document.getElementById('loc');
+			var btn=document.getElementById('btn');
+			btn.addEventListener("click",function() {
+				try{
+					navigator.geolocation.getCurrentPosition(showPosition);
+				}
+				catch {
+					loc.innerHTML=err;
+				}
+			
+			});
+			function showPositon(position){
+				loc.innerHTML="latitude: " + position.coords.latitude + "<br> Longitude :" + position.coords.longitude;
+			}
+
+		</script> -->
+
+</body>
+</html>
